@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB93357D2A263F7600360766 /* FilmesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93357C2A263F7600360766 /* FilmesView.swift */; };
+		DB93357F2A263F9D00360766 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93357E2A263F9D00360766 /* CollectionView.swift */; };
 		EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */; };
 		EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8862A2630C4006786D0 /* ContentView.swift */; };
 		EC78F8892A2630C5006786D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC78F8882A2630C5006786D0 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB93357C2A263F7600360766 /* FilmesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesView.swift; sourceTree = "<group>"; };
+		DB93357E2A263F9D00360766 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		EC78F8812A2630C4006786D0 /* IngressoCopycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngressoCopycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngressoCopycatApp.swift; sourceTree = "<group>"; };
 		EC78F8862A2630C4006786D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,9 +57,11 @@
 		EC78F8832A2630C4006786D0 /* IngressoCopycat */ = {
 			isa = PBXGroup;
 			children = (
+				DB93357E2A263F9D00360766 /* CollectionView.swift */,
 				EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */,
 				EC78F8862A2630C4006786D0 /* ContentView.swift */,
 				EC78F8922A2635C0006786D0 /* TabBarView.swift */,
+				DB93357C2A263F7600360766 /* FilmesView.swift */,
 				EC78F8882A2630C5006786D0 /* Assets.xcassets */,
 				EC78F88A2A2630C5006786D0 /* Preview Content */,
 			);
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */,
+				DB93357F2A263F9D00360766 /* CollectionView.swift in Sources */,
 				EC78F8932A2635C0006786D0 /* TabBarView.swift in Sources */,
+				DB93357D2A263F7600360766 /* FilmesView.swift in Sources */,
 				EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
