@@ -15,34 +15,35 @@ struct FilmesView: View {
         NavigationView{
             ScrollView(.vertical){
                 VStack{
-//                    HStack{
-//                        SearchBarView()
-//                    }
-//                    .toolbar {
-//                        ToolbarItemGroup(placement: .primaryAction){
-//                            Button(action: {
-//                                isFilterSheetPresented = true
-//                            }) {
-//                                Image(systemName: "line.3.horizontal.decrease.circle")
-//                                    .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-//                                    .font(Font.custom("SF Text Semibold", size: 20))
-//                            }
-//                            .sheet(isPresented: $isFilterSheetPresented) {
-//                                FilterSelectionView()
-//                            }
-//                            Button() {
-//                                isBagSheetPresented = true
-//                            }label:{
-//                                Image(systemName: "bag")
-//                                    .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-//                                    .font(Font.custom("SF Text Semibold", size: 20))
-//                            }
-//                            .sheet(isPresented: $isBagSheetPresented) {
-//                                BagSelectionView()
-//                            }
-//                        }
-//
-//                    }
+                    
+                    HStack{
+                        SearchBarView()
+                    }
+                    .toolbar {
+                        ToolbarItemGroup(placement: .primaryAction){
+                            Button(action: {
+                                isFilterSheetPresented = true
+                            }) {
+                                Image(systemName: "line.3.horizontal.decrease.circle")
+                                    .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                    .font(Font.custom("SF Text Semibold", size: 20))
+                            }
+                            .sheet(isPresented: $isFilterSheetPresented) {
+                                FilterSelectionView()
+                            }
+                            Button() {
+                                isBagSheetPresented = true
+                            }label:{
+                                Image(systemName: "bag")
+                                    .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                    .font(Font.custom("SF Text Semibold", size: 20))
+                            }
+                            .sheet(isPresented: $isBagSheetPresented) {
+                                BagSelectionView()
+                            }
+                        }
+
+                    }
                     HStack{
                         Text("Buscando em ")
                             .font(Font.custom("SF Text Semibold", size: 13))
