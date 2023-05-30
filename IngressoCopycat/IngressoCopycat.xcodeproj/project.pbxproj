@@ -12,6 +12,7 @@
 		EC78F8892A2630C5006786D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC78F8882A2630C5006786D0 /* Assets.xcassets */; };
 		EC78F88C2A2630C5006786D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC78F88B2A2630C5006786D0 /* Preview Assets.xcassets */; };
 		EC78F8932A2635C0006786D0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8922A2635C0006786D0 /* TabBarView.swift */; };
+		EC78F8952A2643B1006786D0 /* MovieSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		EC78F8882A2630C5006786D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC78F88B2A2630C5006786D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC78F8922A2635C0006786D0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSessionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		EC78F8832A2630C4006786D0 /* IngressoCopycat */ = {
 			isa = PBXGroup;
 			children = (
+				EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */,
 				EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */,
 				EC78F8862A2630C4006786D0 /* ContentView.swift */,
 				EC78F8922A2635C0006786D0 /* TabBarView.swift */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC78F8952A2643B1006786D0 /* MovieSessionsView.swift in Sources */,
 				EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */,
 				EC78F8932A2635C0006786D0 /* TabBarView.swift in Sources */,
 				EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */,
