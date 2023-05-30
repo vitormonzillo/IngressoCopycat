@@ -30,6 +30,7 @@ struct FilmesView: View {
                             }
                             .sheet(isPresented: $isFilterSheetPresented) {
                                 FilterSelectionView()
+                                    .preferredColorScheme(.dark)
                             }
                             Button() {
                                 isBagSheetPresented = true
@@ -40,6 +41,7 @@ struct FilmesView: View {
                             }
                             .sheet(isPresented: $isBagSheetPresented) {
                                 BagSelectionView()
+                                    .preferredColorScheme(.dark)
                             }
                         }
 

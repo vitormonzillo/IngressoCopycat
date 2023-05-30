@@ -7,9 +7,20 @@
 
 import SwiftUI
 
+struct Tipos: Identifiable {
+    var id = UUID()
+    var filtro: String
+    var simbolo: String
+}
+
 struct FilterSelectionView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selectedItems = Set<Int>()
+    @State private var selected = false
+    @State var Filtros = [Tipos(filtro: "Legendado", simbolo: "text.below.photo"),Tipos(filtro: "Dublado", simbolo: "text.bubble"), Tipos(filtro: "Filmes em 2D", simbolo: "view.2d"), Tipos(filtro: "Filmes em 3D", simbolo: "view.3d")]
+    
+    
+    
     var body: some View {
         GeometryReader { geometry in
             NavigationView{
@@ -28,11 +39,9 @@ struct FilterSelectionView: View {
                                 .font(Font.custom("SF Text Semibold", size: 20))
                         }
                         
+                        
                     }
-                    
-                    
-                    
-                    List(0..<5, id: \.self) { index in
+                    List(0..<4, id: \.self) { index in
                         Button(action: {
                             if self.selectedItems.contains(index) {
                                 self.selectedItems.remove(index)
@@ -40,15 +49,22 @@ struct FilterSelectionView: View {
                                 self.selectedItems.insert(index)
                             }
                         }) {
-                            HStack {
-                                Text("Item \(index)")
+                            HStack(alignment: .center) {
+                                Image(systemName: Filtros[index].simbolo)
+                                    .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                Text(Filtros[index].filtro)
+                                    .font(Font.custom("SF Pro Text Semibold", size: 17))
+                                    .foregroundColor(.white)
                                 Spacer()
                                 if self.selectedItems.contains(index) {
                                     Image(systemName: "checkmark")
+                                        .foregroundColor(.white)
                                 }
                             }
                         }
                     }
+                
+                    
                     
                 }
                 
@@ -100,23 +116,7 @@ struct BagSelectionView: View {
                     Spacer()
                     
                     
-//                    List(0..<5, id: \.self) { index in
-//                        Button(action: {
-//                            if self.selectedItems.contains(index) {
-//                                self.selectedItems.remove(index)
-//                            } else {
-//                                self.selectedItems.insert(index)
-//                            }
-//                        }) {
-//                            HStack {
-//                                Text("Item \(index)")
-//                                Spacer()
-//                                if self.selectedItems.contains(index) {
-//                                    Image(systemName: "checkmark")
-//                                }
-//                            }
-//                        }
-//                    }
+                   
                     
                 }
                 

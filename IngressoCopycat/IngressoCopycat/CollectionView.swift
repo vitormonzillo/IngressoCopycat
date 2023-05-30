@@ -8,27 +8,29 @@
 import Foundation
 import SwiftUI
 
-
 struct CollectionView: View {
     
     @State private var list: [Int] = Array(0...11)
     @State private var selectedItem: Int?
+    @ObservedObject var movie: Library = Library()
     
     let rows = [GridItem(.fixed(178)), GridItem(.fixed(178))]
     
     
     var body: some View {
                 LazyVGrid(columns:rows){
-                    ForEach(0...11, id:\.self){ value in
+                    ForEach(0..<movie.movies.count, id:\.self){ index in
                         NavigationLink (destination: FilmesView()){
                             VStack{
-                                Rectangle()
-                                    .foregroundColor(Color.white)
-                                    .frame(width: 170, height: 95)
-                                    .cornerRadius(7)
+                                Image(movie.movies[index].Fotoinicio)
+//                                Rectangle()
+//                                    .foregroundColor(Color.white)
+//                                    .frame(width: 170, height: 95)
+//                                    .cornerRadius(7)
                                 
-                                Text("Guardiões da Galáxia")
+                                Text(movie.movies[index].nome)
                                     .font(Font.custom("SF Text Semibold", size:13))
+                                    .lineLimit(1)
                                     .foregroundColor(Color.white)
                             }
                             
