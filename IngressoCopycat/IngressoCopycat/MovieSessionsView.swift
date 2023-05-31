@@ -65,7 +65,7 @@ struct MovieSessionsView: View {
     }
 
     var body: some View {
-        NavigationStack {
+//        NavigationView {
             List {
                 Section(header: Text("Escolha sua sessão")) {
                     DatePicker(
@@ -87,7 +87,7 @@ struct MovieSessionsView: View {
                 ForEach(filteredSessions, id: \.self) { sessions in
                     Section(header: selectedCinema == nil ? Text("\(sessions.first!.cinema) - \(sessions.first!.language) - \(sessions.first!.format)") : Text(" \(sessions.first!.language) - \(sessions.first!.format)") ) {
                         ForEach(sessions) { session in
-                            NavigationLink(destination: Text("inserir aqui a tela de ingressos")) {
+                            NavigationLink(destination: IngressoView(movie: movie)) {
                                 Text(session.time)
                             }
                         }
@@ -97,7 +97,7 @@ struct MovieSessionsView: View {
 
             }
             .navigationTitle(movie.nome)
-        }
+//        }
     }
 }
 

@@ -82,6 +82,7 @@ struct DetailView: View {
                                 
                             }
                             .padding(.bottom, 16)
+                            .navigationTitle(movie.nome)
                             
                         }
                         
@@ -216,7 +217,7 @@ struct DetailView: View {
             }
             
         }
-        .navigationTitle(movie.nome)
+        .navigationTitle("Filme")
         .navigationBarTitleDisplayMode(.inline)
         .foregroundColor(.white)
     }
