@@ -19,6 +19,8 @@ struct CinemaSession: Identifiable, Hashable {
 struct MovieSessionsView: View {
     @State private var selectedDate = Date()
     @State private var selectedCinema: String? = nil
+    
+    var movie: Movie
 
     let sessions: [CinemaSession] = [
         CinemaSession(cinema: "Cinema A", date: Date(), language: "Dublado", format: "2D", time: "10:00"),
@@ -94,14 +96,14 @@ struct MovieSessionsView: View {
 
 
             }
-            .navigationTitle("Nome do Filme")
+            .navigationTitle(movie.nome)
         }
     }
 }
 
 struct MovieSessionsView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieSessionsView()
+        MovieSessionsView(movie: Movie(nome: "Guardiões da Galaxia", tipo: "Aventura", duracao: "1h 43m", ano: "2023", sinopse: "Em “Guardiões da Galáxia Vol. 3” nosso amado grupo de desajustados está se estabelecendo em Knowhere. Mas não demora muito até que suas vidas sejam reviradas pelo passado turbulento de Rocket. Peter Quill, ainda se recuperando da perda de Gamora, deve reunir sua equipe em uma missão perigosa para salvar a vida de Rocket - uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos.", critica: "81", publico: "91", classificacao: "14", FotoFundo: "guardians", Fotoinicio: "guardiansInicio", elenco: "Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel (oz), Bradley Cooper (Voz), Karen Gillan, Pom Klementieff, Elizabeth Debicki", diretor: "James Gunn", distribuidora: "Disney", País: "Estados Unidos"))
     }
 }
 

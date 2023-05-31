@@ -12,7 +12,7 @@ struct tabBarView: View {
   @State private var SelectedTab = 0
   var body: some View {
       TabView(selection: $SelectedTab) {
-        Text("FILMES")
+        FilmesView()
           .tabItem {
             Image(systemName: "popcorn.fill")
             Text("Filmes")

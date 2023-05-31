@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB93357D2A263F7600360766 /* FilmesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93357C2A263F7600360766 /* FilmesView.swift */; };
+		DB93357F2A263F9D00360766 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93357E2A263F9D00360766 /* CollectionView.swift */; };
+		DB9335832A26421D00360766 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335822A26421D00360766 /* FilterView.swift */; };
+		DB9335852A26428D00360766 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335842A26428D00360766 /* SearchBarView.swift */; };
+		DB9335872A26652E00360766 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335862A26652E00360766 /* LibraryView.swift */; };
+		DB9335892A268AD200360766 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335882A268AD200360766 /* DetailView.swift */; };
 		EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */; };
 		EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8862A2630C4006786D0 /* ContentView.swift */; };
 		EC78F8892A2630C5006786D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC78F8882A2630C5006786D0 /* Assets.xcassets */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB93357C2A263F7600360766 /* FilmesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesView.swift; sourceTree = "<group>"; };
+		DB93357E2A263F9D00360766 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		DB9335822A26421D00360766 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		DB9335842A26428D00360766 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		DB9335862A26652E00360766 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		DB9335882A268AD200360766 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		EC78F8812A2630C4006786D0 /* IngressoCopycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngressoCopycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngressoCopycatApp.swift; sourceTree = "<group>"; };
 		EC78F8862A2630C4006786D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +73,8 @@
 		EC78F8832A2630C4006786D0 /* IngressoCopycat */ = {
 			isa = PBXGroup;
 			children = (
+				DB93357E2A263F9D00360766 /* CollectionView.swift */,
+				DB9335862A26652E00360766 /* LibraryView.swift */,
 				EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */,
 				EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */,
 				EC78F8862A2630C4006786D0 /* ContentView.swift */,
@@ -68,6 +82,10 @@
 				EC78F89E2A2694A7006786D0 /* FavoritesView.swift */,
 				EC78F89C2A26912F006786D0 /* LocationView.swift */,
 				EC78F8922A2635C0006786D0 /* TabBarView.swift */,
+				DB9335882A268AD200360766 /* DetailView.swift */,
+				DB93357C2A263F7600360766 /* FilmesView.swift */,
+				DB9335842A26428D00360766 /* SearchBarView.swift */,
+				DB9335822A26421D00360766 /* FilterView.swift */,
 				EC78F8882A2630C5006786D0 /* Assets.xcassets */,
 				EC78F88A2A2630C5006786D0 /* Preview Content */,
 			);
@@ -157,7 +175,13 @@
 				EC78F89B2A266E93006786D0 /* CinemasView.swift in Sources */,
 				EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */,
 				EC78F89F2A2694A7006786D0 /* FavoritesView.swift in Sources */,
+				DB9335892A268AD200360766 /* DetailView.swift in Sources */,
+				DB93357F2A263F9D00360766 /* CollectionView.swift in Sources */,
 				EC78F8932A2635C0006786D0 /* TabBarView.swift in Sources */,
+				DB9335852A26428D00360766 /* SearchBarView.swift in Sources */,
+				DB9335872A26652E00360766 /* LibraryView.swift in Sources */,
+				DB93357D2A263F7600360766 /* FilmesView.swift in Sources */,
+				DB9335832A26421D00360766 /* FilterView.swift in Sources */,
 				EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
