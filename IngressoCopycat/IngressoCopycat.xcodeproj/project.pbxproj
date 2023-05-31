@@ -22,6 +22,7 @@
 		EC78F89B2A266E93006786D0 /* CinemasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F89A2A266E93006786D0 /* CinemasView.swift */; };
 		EC78F89D2A26912F006786D0 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F89C2A26912F006786D0 /* LocationView.swift */; };
 		EC78F89F2A2694A7006786D0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F89E2A2694A7006786D0 /* FavoritesView.swift */; };
+		EC78F8A12A2794A3006786D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8A02A2794A3006786D0 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		EC78F89A2A266E93006786D0 /* CinemasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemasView.swift; sourceTree = "<group>"; };
 		EC78F89C2A26912F006786D0 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		EC78F89E2A2694A7006786D0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		EC78F8A02A2794A3006786D0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				EC78F89E2A2694A7006786D0 /* FavoritesView.swift */,
 				EC78F89C2A26912F006786D0 /* LocationView.swift */,
 				EC78F8922A2635C0006786D0 /* TabBarView.swift */,
+				EC78F8A02A2794A3006786D0 /* ProfileView.swift */,
 				DB9335882A268AD200360766 /* DetailView.swift */,
 				DB93357C2A263F7600360766 /* FilmesView.swift */,
 				DB9335842A26428D00360766 /* SearchBarView.swift */,
@@ -182,6 +185,7 @@
 				DB9335872A26652E00360766 /* LibraryView.swift in Sources */,
 				DB93357D2A263F7600360766 /* FilmesView.swift in Sources */,
 				DB9335832A26421D00360766 /* FilterView.swift in Sources */,
+				EC78F8A12A2794A3006786D0 /* ProfileView.swift in Sources */,
 				EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

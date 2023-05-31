@@ -32,7 +32,7 @@ struct tabBarView: View {
             Image(systemName: "ticket.fill")
             Text("Ingressos")
           }.tag(3)
-        Text("PERFIL")
+        ProfileView()
           .tabItem {
             Image(systemName: "person.crop.circle.fill")
             Text("Perfil")
