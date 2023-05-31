@@ -69,7 +69,7 @@ struct DetailView: View {
                         }
                         .padding(.bottom, 16)
                         
-                        NavigationLink (destination: FilmesView()){
+                        NavigationLink (destination: MovieSessionsView(movie: movie)){
                             ZStack{
                                 Rectangle()
                                     .frame(width: 265, height: 44)
@@ -223,25 +223,25 @@ struct DetailView: View {
     
 }
 
-private var backButton: some View {
-    Button(action: {
-        // Handle back button action here
-    }) {
-        HStack{
-            Image(systemName: "chevron.left")
-                .imageScale(.large)
-                .frame(width: 44, height: 44)
-                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-                .padding(.trailing, -10)
-            
-            Text("Filmes")
-                .font(Font.custom("SF Text Semibold", size: 20))
-                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-            Spacer()
-            
-        }
-    }
-}
+//private var backButton: some View {
+//    Button(action: {
+//        // Handle back button action here
+//    }) {
+//        HStack{
+//            Image(systemName: "chevron.left")
+//                .imageScale(.large)
+//                .frame(width: 44, height: 44)
+//                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+//                .padding(.trailing, -10)
+//            
+//            Text("Filmes")
+//                .font(Font.custom("SF Text Semibold", size: 20))
+//                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+//            Spacer()
+//            
+//        }
+//    }
+//}
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
