@@ -13,6 +13,9 @@
 		EC78F88C2A2630C5006786D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC78F88B2A2630C5006786D0 /* Preview Assets.xcassets */; };
 		EC78F8932A2635C0006786D0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8922A2635C0006786D0 /* TabBarView.swift */; };
 		EC78F8952A2643B1006786D0 /* MovieSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */; };
+		EC78F89B2A266E93006786D0 /* CinemasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F89A2A266E93006786D0 /* CinemasView.swift */; };
+		EC78F89D2A26912F006786D0 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F89C2A26912F006786D0 /* LocationView.swift */; };
+		EC78F89F2A2694A7006786D0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F89E2A2694A7006786D0 /* FavoritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		EC78F88B2A2630C5006786D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC78F8922A2635C0006786D0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSessionsView.swift; sourceTree = "<group>"; };
+		EC78F89A2A266E93006786D0 /* CinemasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemasView.swift; sourceTree = "<group>"; };
+		EC78F89C2A26912F006786D0 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		EC78F89E2A2694A7006786D0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				EC78F8942A2643B1006786D0 /* MovieSessionsView.swift */,
 				EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */,
 				EC78F8862A2630C4006786D0 /* ContentView.swift */,
+				EC78F89A2A266E93006786D0 /* CinemasView.swift */,
+				EC78F89E2A2694A7006786D0 /* FavoritesView.swift */,
+				EC78F89C2A26912F006786D0 /* LocationView.swift */,
 				EC78F8922A2635C0006786D0 /* TabBarView.swift */,
 				EC78F8882A2630C5006786D0 /* Assets.xcassets */,
 				EC78F88A2A2630C5006786D0 /* Preview Content */,
@@ -144,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC78F8952A2643B1006786D0 /* MovieSessionsView.swift in Sources */,
+				EC78F89D2A26912F006786D0 /* LocationView.swift in Sources */,
+				EC78F89B2A266E93006786D0 /* CinemasView.swift in Sources */,
 				EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */,
+				EC78F89F2A2694A7006786D0 /* FavoritesView.swift in Sources */,
 				EC78F8932A2635C0006786D0 /* TabBarView.swift in Sources */,
 				EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */,
 			);

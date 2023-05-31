@@ -17,7 +17,7 @@ struct tabBarView: View {
             Image(systemName: "popcorn.fill")
             Text("Filmes")
           }.tag(0)
-        Text("CINEMAS")
+        CinemasView()
           .tabItem {
             Image(systemName: "map.fill")
             Text("Cinemas")
