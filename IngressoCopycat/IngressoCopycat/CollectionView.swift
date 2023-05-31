@@ -13,6 +13,7 @@ struct CollectionView: View {
     @State private var list: [Int] = Array(0...11)
     @State private var selectedItem: Int?
     @ObservedObject var movie: Library = Library()
+    @State var num = index
     
     let rows = [GridItem(.fixed(178)), GridItem(.fixed(178))]
     
@@ -20,7 +21,7 @@ struct CollectionView: View {
     var body: some View {
                 LazyVGrid(columns:rows){
                     ForEach(0..<movie.movies.count, id:\.self){ index in
-                        NavigationLink (destination: FilmesView()){
+                        NavigationLink (destination: DetailView(movie: movie.movies[index])){
                             VStack{
                                 Image(movie.movies[index].Fotoinicio)
 //                                Rectangle()
@@ -28,15 +29,16 @@ struct CollectionView: View {
 //                                    .frame(width: 170, height: 95)
 //                                    .cornerRadius(7)
                                 
+                                
                                 Text(movie.movies[index].nome)
                                     .font(Font.custom("SF Text Semibold", size:13))
                                     .lineLimit(1)
                                     .foregroundColor(Color.white)
                             }
-                            
                         }
                         
                     }
+                    
                 }
             
         
