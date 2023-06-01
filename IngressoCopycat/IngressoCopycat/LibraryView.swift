@@ -27,6 +27,14 @@ struct Movie: Identifiable {
     
 }
 
+struct Session : Identifiable{
+    var id = UUID()
+    var cinema: String
+    var tipo: String
+    var data: String
+    var horario: String
+}
+
 class Library: ObservableObject {
    @Published var movies = [
         Movie(nome: "Guardiões da Galaxia", tipo: "Aventura", duracao: "1h 43m", ano: "2023", sinopse: "Em “Guardiões da Galáxia Vol. 3” nosso amado grupo de desajustados está se estabelecendo em Knowhere. Mas não demora muito até que suas vidas sejam reviradas pelo passado turbulento de Rocket. Peter Quill, ainda se recuperando da perda de Gamora, deve reunir sua equipe em uma missão perigosa para salvar a vida de Rocket - uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos.", critica: "81", publico: "91", classificacao: "14", FotoFundo: "guardians", Fotoinicio: "guardiansInicio", elenco: "Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel (oz), Bradley Cooper (Voz), Karen Gillan, Pom Klementieff, Elizabeth Debicki", diretor: "James Gunn", distribuidora: "Disney", País: "Estados Unidos"),
@@ -45,6 +53,15 @@ class Library: ObservableObject {
         
         Movie(nome: "Super Mario Bros", tipo: "Aventura", duracao: "1h 32m", ano: "2023", sinopse: "Mario é um filme baseado na série de video games, Super Mario Bros, da Nintendo. Em Super Mario Bros. - O Filme, Mario (Chris Pratt) é um encanador qualquer no bairro de Brooklyn junto com seu irmão Luigi (Charlie Day). Um dia, Mario e Luigi vão para no reino dos cogumelos, governado pela Princesa Peach (Anya Taylor-Joy), mas ameaçado pelo rei dos Koopas, Bowser (Jack Black), que vai fazer de tudo para conseguir reinar todos os lugares. É então quando Luigi é raptado por Bowser e o usa para procurar Mario, o único capaz de deter o Koopa e reestabelexcer a paz. Mario terá que aprender como viver nesse novo reino perigoso, passando por vários biomas, aprender a dirigir carros, utilizar itens que o fazem soltar bolas de fogo das mãos, virar um animal e andar em plataformas nada confiáveis. Também estará acompanhados de amigos, como Toad (Keegan-Michael Key) e Donkey Kong (Seth Rogan).", critica: "59", publico: "96", classificacao: "L", FotoFundo: "mario", Fotoinicio: "marioInicio", elenco: "Raphael Rossatto, Chris Pratt, Manolo Rey", diretor: "Aaron Horvath, Michael Jelenic", distribuidora: "Warner Bros", País: "Estados Unidos")
     ]
+    
+    @Published var sessions = [Session(cinema: "Kinoplex Dom pedro", tipo: "2D Dublado", data: "Sexta-Feira, 05/04", horario: "16:40"),
+                               Session(cinema: "Cinemark Iguatemi Campinas", tipo: "2D Dublado", data: "Domingo 07/04", horario: "13:30"),
+                               Session(cinema: "Cinemark Iguatemi Campinas", tipo: "3D Legendado", data: "Domingo 07/04", horario: "16:00"),
+                               Session(cinema: "Cinépolis Shopping Campinas", tipo: "2D Legendado", data: "Sábado 06/04", horario: "19:40"),
+                               Session(cinema: "Kinoplex Dom pedro", tipo: "3D Legendado", data: "Segunda 08/04", horario: "20:00"),
+                               Session(cinema: "Kinoplex Dom pedro", tipo: "2D Legendado", data: "Sábado 13/04", horario: "16:30"),
+                               Session(cinema: "Cinemark Iguatemi Campinas", tipo: "3D Dublado", data: "Domingo 14/04", horario: "17:00"),
+                               Session(cinema: "Cinépolis Shopping Campinas", tipo: "3D Dublado", data: "Domingo 07/04", horario: "20:00")]
 }
 
 

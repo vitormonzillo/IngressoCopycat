@@ -20,16 +20,14 @@ struct PoltronaView: View {
     @State private var selectedCells: Set<Cell> = []
     @State private var selectedPoltrona = [""]
     
+    @Binding var isAble: Bool
+    
     let letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     
     var body: some View {
         
         ZStack{
-//            Rectangle()
-//                .frame(width: 360, height: 600)
-//                .ignoresSafeArea()
-//                .foregroundColor(Color(red: 51/255, green: 51/255, blue: 51/255))
-//                .cornerRadius(12)
+
             VStack{
                 VStack {
                     Spacer()
@@ -55,10 +53,12 @@ struct PoltronaView: View {
                                         if selectedCells.contains(cell) {
                                             selectedCells.remove(cell)
                                             element = selectedCells.count
+                                            isAble = true
                                         } else {
                                             selectedCells.insert(cell)
                                             element = selectedCells.count
                                             selectedPoltrona.append("\(letras[row])\(column)")
+                                            isAble = false
                                         }
                                     }
                                     .overlay(
@@ -153,8 +153,9 @@ struct Cell: Hashable, Comparable {
 
 
 struct MatrixView: View {
+    @State var isAble: Bool = false
     var body: some View {
-        PoltronaView(rows: 9, columns: 5)
+        PoltronaView(rows: 9, columns: 5, isAble: $isAble)
             .preferredColorScheme(.dark)
     }
 }

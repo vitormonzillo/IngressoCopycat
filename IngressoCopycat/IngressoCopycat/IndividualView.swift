@@ -11,11 +11,15 @@ struct IndividualView: View {
     var body: some View {
         VStack{
             Image("Ingresso")
-            Image("wallet")
-                .resizable()
-                .frame(width: 200, height: 65)
-                .padding(.top, 32)
-                .padding(.bottom, 32)
+            Button{
+                print("foi")
+            }label:{
+                Image("wallet")
+                    .resizable()
+                    .frame(width: 200, height: 65)
+                    .padding(.top, 32)
+                    .padding(.bottom, 32)
+            }
         }
     }
 }

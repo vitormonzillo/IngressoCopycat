@@ -55,7 +55,9 @@ struct DetailView: View {
                             .foregroundColor(Color.white)
                             .font(Font.custom("SF Pro Text Bold", size: 30))
                             .padding(.bottom, 16)
-                            .lineLimit(1)
+//                            .lineLimit(1)
+                            .frame(width: 400)
+                            .multilineTextAlignment(.center)
                         HStack{
                             Text(movie.tipo)
                                 .foregroundColor(Color(red: 177/255, green: 177/255, blue: 177/255))
@@ -93,7 +95,7 @@ struct DetailView: View {
                                     .font(Font.custom("SF Pro Text Semibold", size: 14))
                                     .padding(.leading, 20)
                                     .padding(.trailing, 20)
-                                
+                                    
                                 
                             }else{
                                 Text(movie.sinopse)
@@ -182,6 +184,7 @@ struct DetailView: View {
                             .font(Font.custom("SF Pro Text Bold", size: 16))
                             .foregroundColor(Color.white)
                             .padding(.top, 5)
+                            
                         Text(movie.elenco)
                             .font(Font.custom("SF Pro Text Bold", size: 15))
                             .foregroundColor(Color.gray)
@@ -212,6 +215,7 @@ struct DetailView: View {
                     }
                 }//FechaVStack
                 .padding(.leading, 20)
+                .padding(.trailing, 20)
                 
                 
             }
@@ -246,6 +250,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(movie:  Movie(nome: "Guardiões da Galaxia", tipo: "Aventura", duracao: "1h 43m", ano: "2023", sinopse: "Em “Guardiões da Galáxia Vol. 3” nosso amado grupo de desajustados está se estabelecendo em Knowhere. Mas não demora muito até que suas vidas sejam reviradas pelo passado turbulento de Rocket. Peter Quill, ainda se recuperando da perda de Gamora, deve reunir sua equipe em uma missão perigosa para salvar a vida de Rocket - uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos.", critica: "81", publico: "91", classificacao: "14", FotoFundo: "guardians", Fotoinicio: "guardiansInicio", elenco: "Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel (oz), Bradley Cooper (Voz), Karen Gillan, Pom Klementieff, Elizabeth Debicki", diretor: "James Gunn", distribuidora: "Disney", País: "Estados Unidos"))
+        DetailView(movie:   Movie(nome: "Dungeons and Dragons: Honra Entre Rebeldes", tipo: "Aventura", duracao: "1h 37m", ano: "2023", sinopse: "Baseado no famoso jogo Dungeons & Dragons de Role Playing game (RPG), o filme contará a história de um ex-harpista e sua parceira, uma humana bárbara, que após fugirem da prisão se juntam ao um mago sem talento e uma druida novata para roubar o trapaceiro responsável por colocar o harpista atrás das grades. Ele, agora chamado de Senhor de Neverwinter, tem como seu aliado um poderoso Mago Vermelho.", critica: "84", publico: "76", classificacao: "14", FotoFundo: "dungeons", Fotoinicio: "dugeonsInicio", elenco: "Justice Smith, Sophia Lillis, Chris Pine, Chloe Coleman, Hugh Grant, Michelle Rodriguez, Regé-Jean Page, Jason Wong, Daisy Head.", diretor: "John Francis Daley, Jonathan Goldstein", distribuidora: "Paramount", País: "Estados Unidos"))
     }
 }
