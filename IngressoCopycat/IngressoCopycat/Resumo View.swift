@@ -54,7 +54,7 @@ struct Resumo_View: View {
                 HStack{
                     Text("Poltronas")
                     Spacer()
-                    Text("K5")
+                    Text("F2")
                 }
                 Section{
                     HStack(alignment: .center){
@@ -81,8 +81,9 @@ struct Resumo_View: View {
                     }
                 }
             }
+            .frame(height: 590)
             NavigationLink{
-                FilmesView()
+                PagamentoView()
             }label: {
                 Text ("Continuar")
                     .font(.headline)
@@ -96,7 +97,9 @@ struct Resumo_View: View {
                     .shadow(radius: 10)
 
             }
+            
             Spacer()
+            
             
         }
         .navigationTitle("Resumo")

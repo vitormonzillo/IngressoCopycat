@@ -27,7 +27,7 @@ struct tabBarView: View {
             Image(systemName: "newspaper.fill")
             Text("Notícias")
           }.tag(2)
-        Text("INGRESSOS")
+        IngressosView()
           .tabItem {
             Image(systemName: "ticket.fill")
             Text("Ingressos")
@@ -47,5 +47,6 @@ struct tabBarView: View {
 struct tabBarView_Previews: PreviewProvider {
   static var previews: some View {
     tabBarView()
+          .preferredColorScheme(.dark)
   }
 }
