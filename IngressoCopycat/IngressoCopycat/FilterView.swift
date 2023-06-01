@@ -57,7 +57,7 @@ struct FilterSelectionView: View {
                     Text("Fechar")
                         .fontWeight(.bold)
                 }))
-                .navigationTitle("Sacola")
+                .navigationTitle("Filtros")
                 .navigationBarTitleDisplayMode(.inline)
                 
                 .padding()
@@ -103,7 +103,7 @@ struct BagSelectionView: View {
                     Text("Fechar")
                         .fontWeight(.bold)
                 }))
-                .navigationTitle("Filtros")
+                .navigationTitle("Sacola")
                 .navigationBarTitleDisplayMode(.inline)
                 
                 

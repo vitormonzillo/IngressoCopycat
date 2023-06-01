@@ -47,6 +47,7 @@ struct IngressosView: View {
 
             }
             .navigationTitle("Ingressos")
+            .navigationBarBackButtonHidden(true)
             
         }
     }

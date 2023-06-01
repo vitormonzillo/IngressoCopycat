@@ -141,7 +141,7 @@ struct PagamentoView: View {
             .frame(height: 580)
             
             NavigationLink{
-                IngressosView()
+                IndividualView()
             }label: {
                 Text ("Pagar")
                     .font(.headline)
@@ -155,6 +155,7 @@ struct PagamentoView: View {
                     .shadow(radius: 10)
                 
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
         .navigationTitle("Pagamento")
         .navigationBarTitleDisplayMode(.inline)
