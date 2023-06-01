@@ -13,6 +13,7 @@
 		DB9335852A26428D00360766 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335842A26428D00360766 /* SearchBarView.swift */; };
 		DB9335872A26652E00360766 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335862A26652E00360766 /* LibraryView.swift */; };
 		DB9335892A268AD200360766 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9335882A268AD200360766 /* DetailView.swift */; };
+		EC6804E02A27BE1B00868431 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6804DF2A27BE1B00868431 /* NewsView.swift */; };
 		EC78F8852A2630C4006786D0 /* IngressoCopycatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */; };
 		EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78F8862A2630C4006786D0 /* ContentView.swift */; };
 		EC78F8892A2630C5006786D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC78F8882A2630C5006786D0 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		DB9335842A26428D00360766 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		DB9335862A26652E00360766 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		DB9335882A268AD200360766 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EC6804DF2A27BE1B00868431 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		EC78F8812A2630C4006786D0 /* IngressoCopycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngressoCopycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC78F8842A2630C4006786D0 /* IngressoCopycatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngressoCopycatApp.swift; sourceTree = "<group>"; };
 		EC78F8862A2630C4006786D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				EC78F89E2A2694A7006786D0 /* FavoritesView.swift */,
 				EC78F89C2A26912F006786D0 /* LocationView.swift */,
 				EC78F8922A2635C0006786D0 /* TabBarView.swift */,
+				EC6804DF2A27BE1B00868431 /* NewsView.swift */,
 				EC78F8A02A2794A3006786D0 /* ProfileView.swift */,
 				DB9335882A268AD200360766 /* DetailView.swift */,
 				DB93357C2A263F7600360766 /* FilmesView.swift */,
@@ -176,6 +179,7 @@
 				EC78F8952A2643B1006786D0 /* MovieSessionsView.swift in Sources */,
 				EC78F89D2A26912F006786D0 /* LocationView.swift in Sources */,
 				EC78F89B2A266E93006786D0 /* CinemasView.swift in Sources */,
+				EC6804E02A27BE1B00868431 /* NewsView.swift in Sources */,
 				EC78F8872A2630C4006786D0 /* ContentView.swift in Sources */,
 				EC78F89F2A2694A7006786D0 /* FavoritesView.swift in Sources */,
 				DB9335892A268AD200360766 /* DetailView.swift in Sources */,

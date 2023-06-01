@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct tabBarView: View {
-  @State private var SelectedTab = 0
+struct TabBarView: View {
+  @State private var selectedTab = 0
   var body: some View {
-      TabView(selection: $SelectedTab) {
+      TabView(selection: $selectedTab) {
         FilmesView()
           .tabItem {
             Image(systemName: "popcorn.fill")
@@ -22,7 +22,7 @@ struct tabBarView: View {
             Image(systemName: "map.fill")
             Text("Cinemas")
           }.tag(1)
-        Text("NOTICIAS")
+        NewsView()
           .tabItem {
             Image(systemName: "newspaper.fill")
             Text("Notícias")
@@ -46,6 +46,6 @@ struct tabBarView: View {
 }
 struct tabBarView_Previews: PreviewProvider {
   static var previews: some View {
-    tabBarView()
+    TabBarView()
   }
 }
