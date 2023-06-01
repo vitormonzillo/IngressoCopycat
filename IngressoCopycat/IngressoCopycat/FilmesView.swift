@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct FilmesView: View {
+    var body: some View {
+        NavigationView{
+            FilmesContentView()
+                .navigationBarBackButtonHidden(true)
+                .navigationTitle("Filmes")
+        }
+    }
+}
+
+struct FilmesContentView: View {
     @State private var isFilterSheetPresented = false
     @State private var isLocationSheetPresented = false
     @State private var isBagSheetPresented = false
@@ -15,7 +25,6 @@ struct FilmesView: View {
     @State private var tipoFilmes = 0
     
     var body: some View {
-        NavigationView{
             ScrollView(.vertical){
                 VStack{
                     
@@ -67,14 +76,6 @@ struct FilmesView: View {
                                 .preferredColorScheme(.dark)
                         }
                     }
-//                    HStack{
-//                        Text("Buscando em ")
-//                            .font(Font.custom("SF Text Semibold", size: 13))
-//                            .foregroundColor(Color.white)
-//                        Text("Campinas, SP")
-//                            .font(Font.custom("SF Text Semibold", size: 13))
-//                            .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-//                    }
                     .padding(.trailing, 180)
                     .padding(.bottom, 10)
                     
@@ -96,14 +97,13 @@ struct FilmesView: View {
                     }
                     
                     
-                }// Fecha VStack
+                }
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationTitle("Filmes")
-            
-        }
+            .navigationBarTitle("Filmes")
     }
 }
+
+
 
 struct FilmesView_Previews: PreviewProvider {
     static var previews: some View {

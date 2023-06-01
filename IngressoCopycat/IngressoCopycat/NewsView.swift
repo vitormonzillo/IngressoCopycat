@@ -18,10 +18,10 @@ struct News: Identifiable {
 let sampleNews: [News] = [
     News(imageName: "news1", title: "Morre Homem Aranha aos 12 anos", description: "Tom Holland caiu num burnaco nas ruas de barueri ele não tava vendo nada tadinho", date: "01/05/2023"),
     News(imageName: "news2", title: "Velozes e Furiosos 14 vem aí", description: "Toretto não terminou sua missão, ele ainda não reformou o Maverick do pai dele, e ta tentando até conseguir", date: "02/05/2023"),
-    News(imageName: "news3", title: "Título da notícia 3", description: "Descrição da notícia 3", date: "03/05/2023"),
-    News(imageName: "news3", title: "Título da notícia 3", description: "Descrição da notícia 3", date: "03/05/2023"),
-    News(imageName: "news3", title: "Título da notícia 3", description: "Descrição da notícia 3", date: "03/05/2023"),
-    News(imageName: "news3", title: "Título da notícia 3", description: "Descrição da notícia 3", date: "03/05/2023")
+    News(imageName: "news3", title: "Andou na prancha? Cuidado", description: "Tubarão, te amo, Falcão, te amo, LK to-a-to-to, to-to-to apaixonada! 'Paixona não porque aqui é só tubarão enquanto tu tá apaixonada nóis ", date: "03/05/2023"),
+    News(imageName: "news1", title: "Morre Homem Aranha aos 12 anos", description: "Tom Holland caiu num burnaco nas ruas de barueri ele não tava vendo nada tadinho", date: "03/05/2023"),
+    News(imageName: "news2", title: "Velozes e Furiosos 14 vem aí", description: "Toretto não terminou sua missão, ele ainda não reformou o Maverick do pai dele, e ta tentando até conseguir", date: "03/05/2023"),
+    News(imageName: "news3", title: "Andou na prancha? Cuidado", description: "Tubarão, te amo, Falcão, te amo, LK to-a-to-to, to-to-to apaixonada! 'Paixona não porque aqui é só tubarão enquanto tu tá apaixonada nóis ", date: "03/05/2023")
 ]
 
 struct NewsView: View {
@@ -71,16 +71,18 @@ struct NewsRow: View {
             HStack {
                 Image(news.imageName)
                     .resizable()
-                    .frame(width: 80, height: 80)
+                    .frame(width: 80, height: 120)
                     .cornerRadius(8)
                 
                 VStack(alignment: .leading) {
                     Text(news.title)
                         .font(.headline)
+                        .padding(.vertical, 0.1)
                     
                     Text(news.description)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
+                        .padding(.vertical, 0.1)
                     
                     Text(news.date)
                         .font(.caption)
@@ -88,6 +90,7 @@ struct NewsRow: View {
                 }
             }
             .padding(.vertical, 8)
+            .padding(.horizontal, 16)
             
             Divider()
         }

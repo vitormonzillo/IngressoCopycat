@@ -53,6 +53,7 @@ struct LocationView: View {
                                     dismiss()
                                 }) {
                                     Text(city)
+                                        .foregroundColor(.white)
                                 }
                             }
 
