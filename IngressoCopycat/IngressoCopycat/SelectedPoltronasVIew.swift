@@ -32,7 +32,7 @@ struct SelectedPoltronasView: View {
                         .shadow(radius: 10)
 
             }
-            .disabled(!isAble)
+            .disabled(isAble)
             .onAppear{
                 isAble = true
             }
