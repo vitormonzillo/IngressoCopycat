@@ -11,7 +11,7 @@ import SwiftUI
 struct IngressoCopycatApp: App {
     var body: some Scene {
         WindowGroup {
-            tabBarView()
+            TabBarView()
                 .preferredColorScheme(.dark)
         }
     }
