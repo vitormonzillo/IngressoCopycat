@@ -28,6 +28,7 @@ struct FavoritesView: View {
                                     .frame(width: 28, height: 28)
                                 
                                 Text(cinema.name)
+                                    .foregroundColor(.white)
                                 
                                 Spacer()
                                 

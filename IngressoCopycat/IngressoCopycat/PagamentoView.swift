@@ -30,7 +30,7 @@ struct PagamentoView: View {
                             Image(systemName: "creditcard.fill")
                                 .resizable()
                                 .frame(width: 31, height: 22)
-                                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                .foregroundColor(Color.white)
                                 .padding(.trailing, 16)
                             Text("Cartao de crédito")
                                 .font(Font.custom("SF Pro Text", size: 17))
@@ -60,7 +60,7 @@ struct PagamentoView: View {
                             Image(systemName: "creditcard.fill")
                                 .resizable()
                                 .frame(width: 31, height: 22)
-                                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                .foregroundColor(Color.white)
                                 .padding(.trailing, 16)
                             Text("Cartao de débito")
                                 .foregroundColor(.white)
@@ -141,7 +141,7 @@ struct PagamentoView: View {
             .frame(height: 580)
             
             NavigationLink{
-                IngressosView()
+                IndividualView()
             }label: {
                 Text ("Pagar")
                     .font(.headline)
@@ -155,6 +155,7 @@ struct PagamentoView: View {
                     .shadow(radius: 10)
                 
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
         .navigationTitle("Pagamento")
         .navigationBarTitleDisplayMode(.inline)

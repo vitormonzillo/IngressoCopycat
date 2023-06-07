@@ -23,19 +23,19 @@ struct MovieSessionsView: View {
     var movie: Movie
 
     let sessions: [CinemaSession] = [
-        CinemaSession(cinema: "Cinema A", date: Date(), language: "Dublado", format: "2D", time: "10:00"),
-        CinemaSession(cinema: "Cinema A", date: Date(), language: "Legendado", format: "2D", time: "11:00"),
-        CinemaSession(cinema: "Cinema A", date: Date(), language: "Dublado", format: "3D", time: "12:30"),
-        CinemaSession(cinema: "Cinema A", date: Date(), language: "Legendado", format: "3D", time: "13:00"),
-        CinemaSession(cinema: "Cinema B", date: Date(), language: "Dublado", format: "2D", time: "14:30"),
-        CinemaSession(cinema: "Cinema B", date: Date(), language: "Legendado", format: "2D", time: "15:30"),
-        CinemaSession(cinema: "Cinema B", date: Date(), language: "Dublado", format: "2D", time: "16:30"),
-        CinemaSession(cinema: "Cinema B", date: Date(), language: "Legendado", format: "2D", time: "17:30"),
-        CinemaSession(cinema: "Cinema C", date: Date(), language: "Dublado", format: "2D", time: "18:30"),
-        CinemaSession(cinema: "Cinema C", date: Date(), language: "Dublado", format: "2D", time: "19:30"),
-        CinemaSession(cinema: "Cinema C", date: Date(), language: "Dublado", format: "2D", time: "20:30"),
-        CinemaSession(cinema: "Cinema C", date: Date(), language: "Dublado", format: "2D", time: "21:30"),
-        CinemaSession(cinema: "Cinema do Sergio", date: Date(), language: "Dublado", format: "2D", time: "21:30")
+        CinemaSession(cinema: "Kinoplex Dom Pedro", date: Date(), language: "Dublado", format: "2D", time: "10:00"),
+        CinemaSession(cinema: "Kinoplex Dom Pedro", date: Date(), language: "Legendado", format: "2D", time: "11:00"),
+        CinemaSession(cinema: "Kinoplex Dom Pedro", date: Date(), language: "Dublado", format: "3D", time: "12:30"),
+        CinemaSession(cinema: "Kinoplex Dom Pedro", date: Date(), language: "Dublado", format: "2D", time: "16:40"),
+        CinemaSession(cinema: "Cinemark Iguatemi", date: Date(), language: "Dublado", format: "2D", time: "14:30"),
+        CinemaSession(cinema: "Cinemark Iguatemi", date: Date(), language: "Legendado", format: "2D", time: "15:30"),
+        CinemaSession(cinema: "Cinemark Iguatemi", date: Date(), language: "Dublado", format: "2D", time: "16:30"),
+        CinemaSession(cinema: "Cinemark Iguatemi", date: Date(), language: "Legendado", format: "2D", time: "17:30"),
+        CinemaSession(cinema: "Cinépolis Galleria", date: Date(), language: "Dublado", format: "2D", time: "18:30"),
+        CinemaSession(cinema: "Cinépolis Galleria", date: Date(), language: "Dublado", format: "2D", time: "19:30"),
+        CinemaSession(cinema: "Cinépolis Galleria", date: Date(), language: "Dublado", format: "2D", time: "20:30"),
+        CinemaSession(cinema: "Cinépolis Galleria", date: Date(), language: "Dublado", format: "2D", time: "21:30"),
+        CinemaSession(cinema: "Cinema Sergio Ordine", date: Date(), language: "Dublado", format: "2D", time: "21:30")
     ]
 
     var cinemaOptions: [String] {
@@ -65,7 +65,6 @@ struct MovieSessionsView: View {
     }
 
     var body: some View {
-//        NavigationView {
             List {
                 Section(header: Text("Escolha sua sessão")) {
                     DatePicker(
@@ -97,7 +96,6 @@ struct MovieSessionsView: View {
 
             }
             .navigationTitle(movie.nome)
-//        }
     }
 }
 

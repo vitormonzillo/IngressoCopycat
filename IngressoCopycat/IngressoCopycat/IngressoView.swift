@@ -29,12 +29,23 @@ class Tickets:ObservableObject {
                         Item(name: "Meia", count:0, valor:"R$ 16,00"),
                         Item(name: "Meia Itaú", count:0, valor:"R$ 16,00"),
                  Item(name: "Meia Bank", count:0, valor:"R$ 16,00")]
+    
+    func AllValuesAreZero() -> Bool {
+        for type in types {
+            if type.count != 0 {
+                return false
+            }
+        }
+        return true
+    }
 }
 struct IngressoView: View{
     let White_color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     let TextView = "Feriados e pontos facultativos serão praticados\nos preços de final de semana. Promoções não são\ncumulativas com outras promoções ou benefícios de\nmeia-entrada."
     @ObservedObject var tickets = Tickets()
+//    @State var isAble = false
     var movie: Movie
+    
     
     var body: some View{
             // Stack Principal
@@ -95,13 +106,13 @@ struct IngressoView: View{
                                                 .font(.system(size: 18, weight: .bold, design: .default))
                                             Text(tickets.types[index].valor)
                                                 .foregroundColor(.gray)
-                                                .font(.system(size: 14, weight: .bold, design: .default))
+                                                .font(.system(size: 14, weight: .regular, design: .default))
                                         }
                                         Spacer()
                                         VStack(alignment: .leading){
                                             Text("Quantidade:")
                                               .foregroundColor(.gray)
-                                              .font(.system(size: 16, weight: .bold, design: .default))
+                                              .font(.system(size: 16, weight: .regular, design: .default))
                                             Text(" \(tickets.types[index].count)")
                                             .font(.system(size: 16, weight: .bold, design: .default))
                                         }
@@ -123,12 +134,13 @@ struct IngressoView: View{
                         .font(.system(size: 13, weight: .bold, design: .default))
                         .foregroundColor(Color(.white))
                     //    .position(x:190, y:165)
-                        
+                    
                 }
                 .padding(.top,6)
                 .padding(.bottom,16)
-//                .position(x:190, y:540)
+                //                .position(x:190, y:540)
                 // Botao continuar
+                
                 NavigationLink {
                     SelectedPoltronasView(movie: movie)
                 }label: {
@@ -138,20 +150,25 @@ struct IngressoView: View{
                         .foregroundColor(.white)
                         .padding()
                         .padding(.horizontal, 120)
-                        .background(Color(red: 238/255, green: 123/255, blue: 48/255)
-                        )
+                        .background(tickets.AllValuesAreZero() ? Color.gray : Color(red: 238/255, green: 123/255, blue: 48/255))
                         .cornerRadius (10)
                         .shadow(radius: 10)
-//                        .position(x:200, y:650)
+                    //                        .position(x:200, y:650)
                 }
+                .disabled(tickets.AllValuesAreZero())
                 .buttonStyle(.plain)
                 Spacer()
+                
+                
+                
             }// Fecha ZStack Principal
             .navigationTitle("Ingressos")
             .navigationBarTitleDisplayMode(.inline)
-      
+        
     }
-
+    
+    
+    
 }
 struct IngressoView_Previews: PreviewProvider {
     static var previews: some View {

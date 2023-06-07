@@ -58,7 +58,7 @@ struct CinemasView: View {
             List {
                 Section(header: Text("Favoritos")) {
                     ForEach(favoriteCinemas) { cinema in
-                        NavigationLink(destination: Text("inserir filmes aqui")) {
+                        NavigationLink(destination: FilmesContentView()) {
                             HStack {
                                 Image(cinema.brandIcon)
                                     .resizable()

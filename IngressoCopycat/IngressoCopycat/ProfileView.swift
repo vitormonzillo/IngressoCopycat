@@ -20,7 +20,7 @@ struct ProfileView: View {
                     NavigationLink(destination: Text("Compras")) {
                         Text("Compras")
                     }
-                    NavigationLink(destination: Text("Cards")) {
+                    NavigationLink(destination: Cards1View()) {
                         Text("Cartões")
                     }
                     Section{

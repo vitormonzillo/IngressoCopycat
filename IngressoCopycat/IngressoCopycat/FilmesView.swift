@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct FilmesView: View {
-    @State private var isFilterSheetPresented = false
-    @State private var isBagSheetPresented = false
-    
     var body: some View {
         NavigationView{
+            FilmesContentView()
+                .navigationBarBackButtonHidden(true)
+                .navigationTitle("Filmes")
+        }
+    }
+}
+
+struct FilmesContentView: View {
+    @State private var isFilterSheetPresented = false
+    @State private var isLocationSheetPresented = false
+    @State private var isBagSheetPresented = false
+    @State var selectedCity: String? = "Campinas"
+    @State private var tipoFilmes = 0
+    
+    var body: some View {
             ScrollView(.vertical){
                 VStack{
                     
@@ -46,49 +58,52 @@ struct FilmesView: View {
                         }
 
                     }
+                    
                     HStack{
-                        Text("Buscando em ")
-                            .font(Font.custom("SF Text Semibold", size: 13))
+                        Text("Buscando em")
                             .foregroundColor(Color.white)
-                        Text("Campinas, SP")
                             .font(Font.custom("SF Text Semibold", size: 13))
-                            .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                        
+                        Button(action: {
+                            isLocationSheetPresented = true
+                        }) {
+                            Text("Campinas, SP")
+                                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                .font(Font.custom("SF Text Semibold", size: 13))
+                        }
+                        .sheet(isPresented: $isLocationSheetPresented) {
+                            LocationView(selectedCity: $selectedCity)
+                                .preferredColorScheme(.dark)
+                        }
                     }
                     .padding(.trailing, 180)
                     .padding(.bottom, 10)
                     
                     //Barra selecao
-                    ZStack{
-                        Rectangle()
-                            .frame(width: 358, height: 32)
-                            .foregroundColor(Color(red: 50/255, green: 51/255, blue: 54/255))
-                            .cornerRadius(10)
-                        Rectangle()
-                            .frame(width: 178, height:28)
-                            .foregroundColor(Color(red: 99/255, green: 99/255, blue: 102/255))
-                            .cornerRadius(7)
-                            .padding(.trailing, 168)
-                        Text("Em Cartaz")
-                            .font(Font.custom("SF Text Semibold", size:13))
-                            .foregroundColor(.white)
-                            .padding(.trailing, 168)
-                        Text("Em Breve")
-                            .font(Font.custom("SF Text Semibold", size:13))
-                            .foregroundColor(.white)
-                            .padding(.leading, 168)
-                    }// Fecha barra
-                    .padding(.bottom, 30)
+                    Picker(selection: $tipoFilmes, label: Text("test")) {
+                        Text("Em Cartaz").tag(0)
+                        Text("Em Breve").tag(1)
                     
-                    CollectionView()
+                }
+                    .pickerStyle(.segmented)
+                    .frame(width: 375)
+                   // Fecha barra
+                    .padding(.bottom, 16)
                     
-                }// Fecha VStack
+                    if tipoFilmes == 0 {
+                        CollectionView()
+                    }else{
+                        Text("")
+                    }
+                    
+                    
+                }
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationTitle("Filmes")
-            
-        }
+            .navigationBarTitle("Filmes")
     }
 }
+
+
 
 struct FilmesView_Previews: PreviewProvider {
     static var previews: some View {

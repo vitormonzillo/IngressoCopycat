@@ -70,7 +70,7 @@ struct Resumo_View: View {
                                 .font(.system(size: 21, weight: .bold, design: .default))
                                 .foregroundColor(Color(.white))
                             //                            .frame(maxWidth: .infinity, alignment:.leading)
-                            Text("R$92,00")
+                            Text("R$32,00")
                                 .font(.system(size: 18, weight: .regular, design: .default))
                                 .foregroundColor(Color(.white))
                             //                            .frame(maxWidth: .infinity, alignment:.leading)

@@ -10,11 +10,12 @@ import SwiftUI
 struct SelectedPoltronasView: View {
     
     var movie: Movie
+    @State private var isAble: Bool = false
     
     var body: some View {
         VStack{
             Spacer()
-            PoltronaView(rows: 8, columns: 5)
+            PoltronaView(rows: 8, columns: 5, isAble: $isAble)
                 .frame(height: 580)
             Spacer()
             NavigationLink{
@@ -26,11 +27,16 @@ struct SelectedPoltronasView: View {
                         .foregroundColor(.white)
                         .padding()
                         .padding(.horizontal, 120)
-                        .background(Color(red: 238/255, green: 123/255, blue: 48/255))
+                        .background(isAble ? Color.gray : Color(red: 238/255, green: 123/255, blue: 48/255))
                         .cornerRadius (10)
                         .shadow(radius: 10)
 
             }
+            .disabled(isAble)
+            .onAppear{
+                isAble = true
+            }
+
             Spacer()
         }
         

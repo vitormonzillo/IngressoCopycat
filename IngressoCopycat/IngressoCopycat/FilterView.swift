@@ -25,22 +25,6 @@ struct FilterSelectionView: View {
         GeometryReader { geometry in
             NavigationView{
                 VStack {
-                    HStack{
-                        Spacer()
-                        Text("Filtros")
-                            .font(Font.custom("SF Pro Text Semibold", size: 20))
-                            .padding(.leading, 20)
-                        Spacer()
-                        Button(action: {
-                            dismiss()
-                        }) {
-                            Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-                                .font(Font.custom("SF Text Semibold", size: 20))
-                        }
-                        
-                        
-                    }
                     List(0..<4, id: \.self) { index in
                         Button(action: {
                             if self.selectedItems.contains(index) {
@@ -51,7 +35,7 @@ struct FilterSelectionView: View {
                         }) {
                             HStack(alignment: .center) {
                                 Image(systemName: Filtros[index].simbolo)
-                                    .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
+                                    .foregroundColor(Color.white)
                                 Text(Filtros[index].filtro)
                                     .font(Font.custom("SF Pro Text Semibold", size: 17))
                                     .foregroundColor(.white)
@@ -67,9 +51,18 @@ struct FilterSelectionView: View {
                     
                     
                 }
+                .navigationBarItems(trailing: Button(action: {
+                    dismiss()
+                }, label: {
+                    Text("Fechar")
+                        .fontWeight(.bold)
+                }))
+                .navigationTitle("Filtros")
+                .navigationBarTitleDisplayMode(.inline)
                 
                 .padding()
             }
+           
         }
         
     }
@@ -98,31 +91,25 @@ struct BagSelectionView: View {
         GeometryReader { geometry in
             NavigationView{
                 VStack {
-                    HStack{
-                        Spacer()
-                        Text("Sacola")
-                            .font(Font.custom("SF Pro Text Semibold", size: 20))
-                            .padding(.leading, 20)
-                        Spacer()
-                        Button(action: {
-                            dismiss()
-                        }) {
-                            Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(Color(red: 238/255, green: 123/255, blue: 48/255))
-                                .font(Font.custom("SF Text Semibold", size: 20))
-                        }
-                        
-                    }
                     Spacer()
                     
                     
                    
                     
                 }
+                .navigationBarItems(trailing: Button(action: {
+                    dismiss()
+                }, label: {
+                    Text("Fechar")
+                        .fontWeight(.bold)
+                }))
+                .navigationTitle("Sacola")
+                .navigationBarTitleDisplayMode(.inline)
                 
                 
                 .padding()
             }
+            
         }
     }
 }
