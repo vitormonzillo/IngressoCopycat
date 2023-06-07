@@ -13,7 +13,6 @@ struct IngressoCollectionView: View {
     @State private var selectedItem: Int?
     @ObservedObject var movie: Library = Library()
     @State var num = index
-    
     let rows = [GridItem(.fixed(300))]
     
     
